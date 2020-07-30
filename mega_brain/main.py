@@ -26,23 +26,23 @@ def start():
     while (ctrl is not 3):
         load_game(ctrl)
         ctrl = menu()
+
+def menu():
+    print(print_machine.resolve(msg='**________________***________________**\n', level=1))
+    print(print_machine.resolve(msg='Escolha um nível de Jogo\n', level=0))
+    print(print_machine.resolve(msg='1. Iron Man\n2. Puss Mode\n3. Sair', level=2))
+    return int(input())
+
 def load_game(level=1):
     if level is 1:
-        print(print_machine.resolve(msg='______________________\n', level=1))
+        print(print_machine.resolve(msg='_______________________________________\n', level=1))
         print(print_machine.resolve(msg='Let the Games Begin!\n', level=2))
         ge = Iron_Man()
     else:
-        print(print_machine.resolve(msg='______________________\n', level=1))
+        print(print_machine.resolve(msg='_______________________________________\n', level=1))
         print(print_machine.resolve(msg='Bem vindo a terra dos Unicórnios!\n', level=3))
         ge = Iron_Man()
 def end(status):
     print("Até a proxima")
 
-# print(colored('grey', 'grey', attrs=['bold']))
-# print(colored('red', 'red', attrs=['bold']))
-# print(colored('green', 'green', attrs=['bold']))
-# print(colored('yellow', 'yellow', attrs=['bold']))
-# print(colored('blue', 'blue', attrs=['bold']))
-# print(colored('magenta', 'magenta', attrs=['bold']))
-# print(colored('cyan', 'cyan', attrs=['bold']))
-# print(colored('white', 'white', attrs=['bold']))
+start()

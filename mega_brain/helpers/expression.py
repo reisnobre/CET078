@@ -17,3 +17,6 @@ class Expression:
 
     def check(self, guess):
         return True if guess == self.__answer else False
+
+    def problem(self):
+        return '{}\t{}\t{}\t{:.2f}'.format(self.__difficulty, self.__category, self.__expression, self.__answer)
